@@ -1,12 +1,10 @@
 pipeline {
      agent any
   
-   
     stages {
-        stage('Check') {
+        stage('Build') {
             steps {
                 echo "Checking Your Code"
-               
             }
         }
 
@@ -17,7 +15,7 @@ pipeline {
                 }
             }
             steps {
-                echo "Testing Your App" 
+                echo "Testing Your Code" 
             }
         }
         
