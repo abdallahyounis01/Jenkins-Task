@@ -1,5 +1,8 @@
 pipeline {
      agent any
+      parameters {
+        booleanParam(name:'Bool-Para', defaultValue: true, description:'this paramater help you to know project name')
+    }
    
     stages {
         stage('Check') {
