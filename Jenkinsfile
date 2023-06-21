@@ -1,8 +1,6 @@
 pipeline {
      agent any
-      parameters {
-        booleanParam(name:'Bool-Para', defaultValue: true, description:'this paramater help you to know project name')
-    }
+  
    
     stages {
         stage('Check') {
@@ -15,7 +13,7 @@ pipeline {
         stage('Test') {
             when {
                 expression{
-                    params.Bool-Param == true 
+                    params.BoolParam == true 
                 }
             }
             steps {
